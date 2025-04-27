@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-04-27T12:14:09.186734" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="D:\chuong4\login_tests.robot">
+<test id="s1-t1" name=" Đăng nhập thành công" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:09.664417" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-27T12:14:09.664417" elapsed="7.206578"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:14:16.870995" elapsed="0.043500"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-27T12:14:16.914495" elapsed="0.929069"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:17.843564" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:17.843564" elapsed="0.129037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:17.972601" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:17.972601" elapsed="0.179999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:18.152600" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:18.152600" elapsed="0.165018"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-27T12:14:18.319023" elapsed="1.541294"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:19.886607" level="INFO">Current page contains element 'xpath=//h6[text()='Dashboard']'.</msg>
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-27T12:14:19.860317" elapsed="0.026290"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T12:14:19.888043" level="INFO">Đăng nhập thành công</msg>
+<arg>Đăng nhập thành công</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T12:14:19.886607" elapsed="0.001436"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:19.890994" level="INFO">Executing JavaScript:
+alert(" Đăng nhập thành công!")
+Without any arguments.</msg>
+<arg>alert(" Đăng nhập thành công!")</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-04-27T12:14:19.888043" elapsed="0.019096"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-27T12:14:21.907604" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-27T12:14:19.907139" elapsed="2.000465"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-27T12:14:21.907604" elapsed="2.251462"/>
+</kw>
+<status status="PASS" start="2025-04-27T12:14:09.662005" elapsed="14.497061"/>
+</test>
+<test id="s1-t2" name=" Đăng nhập thất bại với tài khoản sai" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:24.159066" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-27T12:14:24.159066" elapsed="7.273868"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:14:31.434686" elapsed="0.052872"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-27T12:14:31.489570" elapsed="0.721343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:32.214891" level="INFO">Typing text 'wronguser' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${INVALID USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:32.214891" elapsed="0.132320"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:32.354671" level="INFO">Typing text 'wrongpass' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${INVALID PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:32.354671" elapsed="0.222938"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:32.579968" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:32.577609" elapsed="0.936168"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-27T12:14:33.515489" elapsed="0.466703"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:34.021915" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-27T12:14:33.997934" elapsed="0.023981"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T12:14:34.022739" level="INFO">Đăng nhập thất bại như mong đợi</msg>
+<arg>Đăng nhập thất bại như mong đợi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T12:14:34.022739" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:34.024989" level="INFO">Executing JavaScript:
+alert(" Đăng nhập thất bại!")
+Without any arguments.</msg>
+<arg>alert(" Đăng nhập thất bại!")</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-04-27T12:14:34.024989" elapsed="0.013513"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-27T12:14:36.038902" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-27T12:14:34.038502" elapsed="2.000400"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-27T12:14:36.038902" elapsed="2.250986"/>
+</kw>
+<status status="PASS" start="2025-04-27T12:14:24.159066" elapsed="14.132838"/>
+</test>
+<test id="s1-t3" name=" Đăng xuất sau khi đăng nhập thành công" line="41">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:38.293919" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-27T12:14:38.293919" elapsed="7.402013"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:14:45.695932" elapsed="0.037669"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-27T12:14:45.733601" elapsed="0.980696"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:46.714297" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:46.714297" elapsed="0.162081"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:46.877389" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:46.876378" elapsed="0.173801"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:47.052762" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:47.050179" elapsed="1.313108"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-27T12:14:48.363287" elapsed="0.383064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:48.751542" level="INFO">Clicking element 'xpath=//span[@class='oxd-userdropdown-tab']'.</msg>
+<arg>xpath=//span[@class='oxd-userdropdown-tab']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:48.751542" elapsed="0.144013"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Logout']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-27T12:14:48.897567" elapsed="0.272099"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:49.169666" level="INFO">Clicking element 'xpath=//a[text()='Logout']'.</msg>
+<arg>xpath=//a[text()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-27T12:14:49.169666" elapsed="2.125841"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-27T12:14:51.295507" elapsed="0.453706"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:51.781343" level="INFO">Current page contains element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-27T12:14:51.749213" elapsed="0.032130"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T12:14:51.781343" level="INFO">Đăng xuất thành công</msg>
+<arg>Đăng xuất thành công</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T12:14:51.781343" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-04-27T12:14:51.781343" level="INFO">Executing JavaScript:
+alert(" Đăng xuất thành công!")
+Without any arguments.</msg>
+<arg>alert(" Đăng xuất thành công!")</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-04-27T12:14:51.781343" elapsed="0.031701"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-27T12:14:53.813329" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-27T12:14:51.813044" elapsed="2.000285"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-27T12:14:53.813329" elapsed="2.276485"/>
+</kw>
+<status status="PASS" start="2025-04-27T12:14:38.293919" elapsed="17.795895"/>
+</test>
+<test id="s1-t4" name="v" line="58">
+<status status="FAIL" start="2025-04-27T12:14:56.093141" elapsed="0.000000">Test cannot be empty.</status>
+</test>
+<status status="FAIL" start="2025-04-27T12:14:09.186734" elapsed="46.906407"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="3" fail="1" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
